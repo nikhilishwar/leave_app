@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Plugin.FirebasePushNotification;
 
 namespace Leave_appz.Droid
 {
@@ -23,6 +24,7 @@ namespace Leave_appz.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
     }
 }
